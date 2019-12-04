@@ -1,0 +1,68 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$cj-app-primary: mat-palette($mat-indigo);
+$cj-app-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$cj-app-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$cj-app-theme: mat-light-theme($cj-app-primary, $cj-app-accent, $cj-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($cj-app-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.mat-dialog-container{
+    padding: 0px !important;
+}
+.modal-header {
+    background-color: #000;
+    padding: 4px;
+}
+.modal-title {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    color: #fff;
+    margin-left: 10px !important;
+    line-height: 2.2;
+}
+.modal-header .close {
+    float: right;
+    outline: none;
+    font-size: 32px !important;
+    font-weight: normal !important;
+    margin-top: 3px;
+    line-height: 1;
+    color: #fff !important;
+    color: #000;
+    filter: alpha(opacity=20);
+    opacity: 1;
+}
+.modal-body{
+    padding: 0px;
+}
+.succsess-bar{
+    background-color: #fff !important;
+    color:#000 !important;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
