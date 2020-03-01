@@ -17,6 +17,11 @@ RUN wget https://codejudge-starter-repo-artifacts.s3.ap-south-1.amazonaws.com/we
 RUN chmod 775 ./build.sh
 RUN ./build.sh
 
+# Chrome driver installations
+RUN wget https://codejudge-starter-repo-artifacts.s3.ap-south-1.amazonaws.com/web-micro-project/javascript/common/code-deploy.sh
+RUN chmod 775 ./code-deploy.sh
+RUN ./code-deploy.sh
+
 # Add extra docker commands here (if any)...
 
 WORKDIR /app/dist
