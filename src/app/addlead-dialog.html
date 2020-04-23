@@ -63,7 +63,7 @@
                 <form *ngIf="popupName==='edit-lead'" class="update_lead_form" (ngSubmit)="leadDetails.form.valid && addLead(leadDetails)"  #leadDetails="ngForm" >
 
                         <div class="col-md-12">
-                                <div class="form-group" class="update_lead_form">
+                                <div class="form-group">
                                         <label>Communication</label>
                                         <textarea class="form-control" name="communication" [(ngModel)]="communication"
                                                 rows="5"></textarea>
