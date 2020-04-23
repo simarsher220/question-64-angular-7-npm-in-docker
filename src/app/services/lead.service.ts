@@ -42,7 +42,7 @@ export class LeadService {
     //get url
     //let url ='http://18.233.115.218:8100/api/leads/'+id+'/';
     let url=this.api.getUrl('editlead');
-    url=url+id+'/';
+    url=url+id;
     //return
     return this.http.put(url,data,this.httpConf.getHeaders())
     .pipe(
@@ -52,7 +52,7 @@ export class LeadService {
 
   deleteLead(id){
      //get url
-     let url=this.api.getUrl('editlead');
+     let url=this.api.getUrl('delLead');
     url=url+id+'/';
   
      //return

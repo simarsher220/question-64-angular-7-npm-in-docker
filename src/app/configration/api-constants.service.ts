@@ -23,6 +23,8 @@ export class ApiConstantsService {
     // init addlead
     addLeadUrl='leads/';
 
+    markLeadUrl='mark_lead/';
+
      /**
    * return respective url based on paramenter
    * @param url resquesting api url
@@ -40,6 +42,9 @@ export class ApiConstantsService {
       return this.protocol+this.apiUrl+this.addLeadUrl;
     }
     if(url=='editlead'){
+      return this.protocol+this.apiUrl+this.markLeadUrl;
+    }
+    if (url=='delLead') {
       return this.protocol+this.apiUrl+this.addLeadUrl;
     }
   }
